@@ -1,0 +1,97 @@
+Hallo Allemaal!
+
+Wat is nieuw
+
+0.99b
+- Override MMPM/2 kan nu op 2 snelheden worden ingesteld, nl 300 ms en
+  1 seconde.
+
+0.98b
+- Override MMPM/2 aangepast om maar 1 seconde te wachten ( op idle priority )
+- Communicatie tussen sliders verbeterd ( minder overhead 0
+- SBPM/2 nu ook via internet op te halen
+
+0.97b
+- Mogelijkheid om geminimaliseerd te starten toegevoegd
+- Eerste gedeelte advanced settings geimplementeerd
+  - SBPRO, filters en input selection )
+  - SB16, speaker volume, Gain In, Automatic Gain
+
+0.95b
+
+- Het is nu mogelijk om MMPM/2 te omzeilen door het gebruik van de
+  optie 'Override SBPM2' Als deze is geactiveerd wordt elke 10 seconden
+  de ingestelde volumes opnieuw weggeschreven naar de soundblaster.
+- Setup procedure is verbeterd, SBPM/2 vraagt nu automatisch naar de settings.
+- Programma is kleiner gemaakt.
+
+Mogelijkheden
+
+- SBPro en SB16 compatible
+- Op de SBPRO: VOC/FM/Mic/CD/LineIn/Main
+- Op de SB16 : VOC/FM/Mic/CD/LineIn/Main/Trebble/Gain/Bass
+- Persistant sliders ( SBPM/2 onthoudt de standen van de sliders
+- Basispoort instelbaar tussen 210 tot 250 ( via de resource file tot 410
+  uitbreidbaar )
+- 'Lock Left & Right' slider
+- SoundBlaster kan tijdens 't starten van SBPM/2 gereset worden.
+- De interface kan via de meegeleverde resources aangepast worden naar
+  eigen smaak.
+
+Hoe te gebruiken:
+
+Met de environment variabele SBPM2 kan de naam en plaats van de ini file worden
+opgegeven. Bijvoorbeeld set SBPM2=E:\VP\OUT\SBPM2.INI ( default is sbpm2.ini
+in de huidige directory )
+
+Daarna het programma starten en instellen of er een SB Pro of SB 16 wordt
+gebruikt. Daarna moet e.e.a. duidelijk zijn.
+
+Waar te halen :
+
+Bundy Board, 2:283/6 ( ISDN/V34 ) of 2:283/600 ( Zyxel )
+BBS Bennekom, 2:283/204 of 2:283/203
+
+Onder de naam sbpm2099.rar, vanwege eventueele updates is het beter om sbpm2*
+te freqqen.
+
+http://www.odie.et.fnt.hvu.nl/users/gerard
+
+Save dan de link sbpm2
+
+overigens zal odie niet altijd de nieuwste versie bevatten...
+
+
+ License and disclaimer
+
+ "SBPM/2"  refers to  the  executables  and  documentation  in  the
+ original distribution archive. SBPM/2 is copyrighted  material by
+ Gerard Gerritsen. It may only be used in agreement with the conditions set
+ out in this license agreement. SBPM/2 may be freely distributed as long as
+ no files are removed from the package and the files are not modified in
+ any way, and as long as no money or any other compensation is asked or
+ accepted for this package without prior written permission from the author.
+
+ Although care has been taken to write and test a program that
+ does what this document states, the program is provided  as is,
+ without warranty  or guarantee of  any kind, either  expressed or
+ implied, as to the quality or performance of this program, except
+ that it will occupy disk space.
+
+ The author, Gerard Gerritsen, will not be held liable to you
+ or anyone for (but not limited to) any direct, indirect,
+ incidental or consequential damages, including any lost profits,
+ lost savings which may result from the use or inability to use
+ this program.
+
+ Gerard Gerritsen is in no way obligated to provide future versions of, or
+ support for this software.
+
+ Your  use  of  the  program constitutes  your  agreement  to this
+ license and  disclaimer and your  release of the author  from any
+ form of liability or litigation.
+
+
+ Use of SBPM/2
+
+ This release of SBPM/2 is Freeware.

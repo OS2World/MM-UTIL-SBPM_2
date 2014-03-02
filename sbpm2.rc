@@ -1,0 +1,117 @@
+//#include "os2.h"
+#define OS2_INCLUDED
+/* To recompile the resources
+/* RC SBPM2
+/* To recompile the resources and compress them
+/* RC -P -X1 SBPM2
+/* To recompile the resources with maximum compression ( you'll need WARP or better )
+/* RC -P -X2 SBPM2
+
+/* Constants for OS/2 */
+#define CLR_FALSE                 (-5L)
+#define CLR_TRUE                  (-4L)
+#define CLR_ERROR               (-255L)
+#define CLR_DEFAULT               (-3L)
+#define CLR_WHITE                 (-2L)
+#define CLR_BLACK                 (-1L)
+#define CLR_BACKGROUND              0L
+#define CLR_BLUE                    1L
+#define CLR_RED                     2L
+#define CLR_PINK                    3L
+#define CLR_GREEN                   4L
+#define CLR_CYAN                    5L
+#define CLR_YELLOW                  6L
+#define CLR_NEUTRAL                 7L
+#define CLR_DARKGRAY                8L
+#define CLR_DARKBLUE                9L
+#define CLR_DARKRED                10L
+#define CLR_DARKPINK               11L
+#define CLR_DARKGREEN              12L
+#define CLR_DARKCYAN               13L
+#define CLR_BROWN                  14L
+#define CLR_PALEGRAY               15L
+#define PP_FOREGROUNDCOLORINDEX         2L
+#define PP_BACKGROUNDCOLORINDEX         4L
+#define SLS_OWNERDRAW           0x00000040L
+#define SLS_RIBBONSTRIP         0x00000100L
+#define WC_STATIC               0xffff0005L
+#define BS_ICON                 0x0080L
+#define BS_NOPOINTERFOCUS       0x0800L
+#define FCF_TITLEBAR            0x00000001L
+#define FCF_SYSMENU             0x00000002L
+#define FCF_MINBUTTON           0x00000010L
+#define FCF_DLGBORDER           0x00000100L
+#define FCF_BORDER              0x00000200L
+#define FCF_TASKLIST            0x00000800L
+#define WS_VISIBLE              0x80000000L
+#define FS_DLGBORDER            0x00000080L
+#define FS_BORDER               0x00000100L
+#define WS_SYNCPAINT            0x02000000L
+#define FCF_ACCELTABLE          0x00008000L
+#define ES_LEFT                 0x00000000L
+#define ES_CENTER               0x00000001L
+#define ES_RIGHT                0x00000002L
+#define ES_MARGIN               0x00000008L
+#define ES_SBCS                 0x00001000L
+#define ES_AUTOSCROLL           0x00000004L
+#define DT_VCENTER              0x0400
+#define BS_AUTOSIZE             0x4000L
+#define SLS_VERTICAL            0x00000001L
+#define SLS_SNAPTOINCREMENT     0x00000008L
+#define DT_HALFTONE             0x1000
+#define WS_GROUP                0x00010000L
+#define FS_ACCELTABLE           0x00000002L
+#define SS_FGNDFRAME            0x0008L
+#define FS_SYSMODAL             0x00000040L
+#define WS_TABSTOP              0x00020000L
+#define FCF_HIDEBUTTON          0x01000000L
+#define CDAUDIOSLIDER           0x0
+#define ES_READONLY             0x00000020L
+#define VK_F1                   0x20
+#define VK_F2                   0x21
+#define VK_F3                   0x22
+#define VK_F4                   0x23
+#define VK_F5                   0x24
+#define VK_F6                   0x25
+#define VK_F7                   0x26
+#define VK_F8                   0x27
+#define VK_F9                   0x28
+#define VK_F10                  0x29
+#define VK_F11                  0x2A
+#define VK_F12                  0x2B
+#define BS_NOCURSORSELECT       0x2000L
+#define PP_FONTNAMESIZE         15L
+#define PP_USER                 0x8000L
+#define BS_TEXT                 0x0010
+#define WS_DISABLED             0x40000000L
+
+
+/* Button and menu identifiers */
+#include "sbpm2.h"
+
+/* Dialogs */
+rcinclude "sbpm2.dlg"
+
+/* BasePort for OS/2, the program will accept values between 210h and 400h */
+/* Change on your own risk                                                 */
+#define  h210                528
+#define  h220                544
+#define  h230                560
+#define  h240                576
+#define  h250                592
+#define  h260                608
+
+/* Icons */
+/* Icon 1 is the icon that is shown in the directory folder */
+
+ICON 1 "sound.ico"
+ICON 2 "ok.ico"
+
+/* The menu description */
+
+MENU ID_resource
+     {
+         MENUITEM "~Sound settings",     IDM_MUSIC
+         MENUITEM "A~dvanced settings",  IDM_ADVANCED
+         MENUITEM "~About SBPM//2...",  IDM_ABOUT
+     }

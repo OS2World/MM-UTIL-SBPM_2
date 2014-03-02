@@ -1,0 +1,236 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "sbpm2.h"
+
+DLGTEMPLATE VolumeSbPro LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", VolumeSbPro, 32, 47, 203, 80, NOT FS_DLGBORDER | FS_BORDER, 
+            FCF_SYSMENU | FCF_TITLEBAR | FCF_MINBUTTON | FCF_TASKLIST
+    BEGIN
+        SLIDER          MAINSLIDERLEFT, 12, 10, 18, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          CDSLIDERLEFT, 44, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        CTEXT           "Main", hInputGainRight, 16, 53, 20, 8, DT_VCENTER
+        CTEXT           "CD", -1, 43, 53, 20, 8, DT_VCENTER
+        CTEXT           "Sound Blaster Pro", -1, 22, 64, 170, 8, DT_VCENTER
+        CONTROL         "", 107, 6, 4, 188, 71, WC_STATIC, SS_FGNDFRAME | 
+                        WS_GROUP | WS_VISIBLE
+        SLIDER          MAINSLIDERRIGHT, 28, 10, 12, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          CDSLIDERRIGHT, 58, 10, 10, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          LineInLeft, 74, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          LineInRight, 88, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        CTEXT           "Line", 118, 72, 53, 26, 8, DT_VCENTER
+        SLIDER          Microphone, 109, 10, 14, 38, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 4, 0, 1, 0
+        LTEXT           "Mic", 121, 109, 53, 19, 8
+        SLIDER          VocLeft, 127, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          VocRight, 141, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        CTEXT           "VOC", 124, 129, 53, 20, 8, DT_VCENTER
+        SLIDER          FmLeft, 158, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          FmRight, 171, 10, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        CTEXT           "FM", 126, 157, 53, 20, 8, DT_VCENTER
+    END
+END
+
+DLGTEMPLATE VolumeSB16 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", VolumeSB16, 11, 34, 300, 68, , FCF_SYSMENU | FCF_TITLEBAR | 
+            FCF_MINBUTTON | FCF_TASKLIST
+    BEGIN
+        CTEXT           "Main", hInputGainRight, 114, 46, 20, 8, DT_VCENTER
+        CTEXT           "CD", -1, 140, 46, 20, 8, DT_VCENTER
+        CTEXT           "SoundBlaster 16", -1, 85, 56, 119, 8, DT_VCENTER
+        CONTROL         "", 107, 2, 2, 294, 64, WC_STATIC, SS_FGNDFRAME | 
+                        WS_GROUP | WS_VISIBLE
+        SLIDER          MAINSLIDERLEFT, 111, 5, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          MAINSLIDERRIGHT, 124, 5, 14, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          CDSLIDERLEFT, 138, 5, 17, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          CDSLIDERRIGHT, 153, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        CTEXT           "Treble", 705, 5, 46, 31, 8, DT_VCENTER
+        CTEXT           "Bass", 706, 43, 46, 20, 8, DT_VCENTER
+        LTEXT           "Gain", 708, 77, 46, 20, 8
+        SLIDER          GainSliderRight, 89, 6, 11, 38, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 4, 0, 1, 0
+        SLIDER          GainSliderLeft, 75, 6, 13, 38, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 4, 0, 1, 0
+        SLIDER          TrebleSliderLeft, 8, 5, 16, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          TrebleSliderRight, 24, 5, 12, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          BassSliderLeft, 42, 5, 16, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          BassSliderRight, 58, 5, 11, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          VocLeft, 169, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          VocRight, 182, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          FmLeft, 205, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          FmRight, 217, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          LineInLeft, 235, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          LineInRight, 249, 5, 13, 40, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        SLIDER          Microphone, 277, 5, 13, 39, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 16, 0, 1, 0
+        CTEXT           "VOC", 720, 170, 46, 20, 8, DT_VCENTER
+        CTEXT           "FM", 721, 205, 46, 20, 8, DT_VCENTER
+        CTEXT           "Line", 722, 239, 46, 20, 8, DT_VCENTER
+        CTEXT           "Mic", 723, 273, 46, 20, 8, DT_VCENTER
+    END
+END
+
+DLGTEMPLATE AdvancedSBpro LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", AdvancedSBpro, 18, 39, 148, 69, WS_VISIBLE, FCF_SYSMENU | 
+            FCF_TITLEBAR
+    BEGIN
+        AUTORADIOBUTTON "Microphone", hMicSelect, 10, 48, 63, 10, WS_TABSTOP
+        AUTORADIOBUTTON "CD Audio", hCdAudioSelect, 10, 38, 63, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "Line In", HLineInSelect, 10, 28, 63, 10, WS_TABSTOP
+        GROUPBOX        "Filter", 216, 80, 23, 62, 43, NOT WS_GROUP
+        AUTOCHECKBOX    "Filter On", hFilterOn, 83, 26, 54, 10
+        PUSHBUTTON      "#2", 218, 3, 5, 144, 14, BS_ICON
+        GROUPBOX        "Input select", 204, 0, 23, 72, 43, NOT WS_GROUP
+        AUTOCHECKBOX    "Highpass", hHighPass, 83, 36, 58, 10
+        AUTOCHECKBOX    "Lowpass", hLowPass, 83, 47, 52, 10
+    END
+END
+
+DLGTEMPLATE AdvancedSb16 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", AdvancedSb16, 13, 32, 240, 93, WS_VISIBLE, FCF_SYSMENU | 
+            FCF_TITLEBAR
+    BEGIN
+        AUTOCHECKBOX    "Automatic Gain On", hAutomaticGain, 90, 71, 95, 10
+        SLIDER          hSpeaker, 3, 25, 19, 36, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 4, 0, 0, 0
+        SLIDER          hInputGainLeft, 30, 25, 16, 36, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 4, 0, 0, 0
+        SLIDER          hInputGainRight, 47, 25, 16, 36, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | SLS_OWNERDRAW | 
+                        SLS_RIBBONSTRIP | WS_GROUP
+                        CTLDATA 12, 0, 4, 0, 0, 0
+        AUTOCHECKBOX    "Microphone", hMicrophoneControl, 89, 28, 72, 10, 
+                        WS_DISABLED
+        AUTOCHECKBOX    "Right CdAudio", hRightCdAudioControl, 163, 48, 72, 
+                        10, WS_DISABLED
+        AUTOCHECKBOX    "Left CdAudio", hLeftCdAudioControl, 89, 48, 72, 10, 
+                        WS_DISABLED
+        AUTOCHECKBOX    "Right LineIn", hRightLineInControl, 163, 38, 72, 10, 
+                        WS_DISABLED
+        AUTOCHECKBOX    "Left LineIn", hLeftLineInControl, 89, 38, 72, 10, 
+                        WS_DISABLED
+        GROUPBOX        "Output Control", 413, 80, 24, 157, 41, WS_DISABLED
+        GROUPBOX        "Automatic Gain", 414, 79, 67, 158, 21
+        GROUPBOX        "Volume Control", 403, 0, 19, 73, 69
+        CTEXT           "Spkr", 407, 3, 65, 20, 8, DT_VCENTER
+        CTEXT           "Input Gain", 415, 25, 65, 46, 8, DT_VCENTER
+        PUSHBUTTON      "#2", 416, 79, 4, 152, 14, BS_ICON
+    END
+END
+
+DLGTEMPLATE MusicSettings LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "SBPM/2 Setup", MusicSettings, 23, -7, 136, 136, FS_SYSMODAL, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        AUTOCHECKBOX    "Use SoundBlaster", ENABLEBLASTER, 4, 83, 124, 10
+        AUTORADIOBUTTON "210h", 528, 12, 43, 39, 10, WS_TABSTOP
+        AUTORADIOBUTTON "220h", 544, 12, 33, 39, 10, WS_TABSTOP
+        AUTORADIOBUTTON "230h", 560, 12, 23, 39, 10, WS_TABSTOP
+        AUTORADIOBUTTON "240h", 576, 70, 43, 39, 10, WS_TABSTOP
+        AUTORADIOBUTTON "250h", 592, 70, 33, 39, 10, WS_TABSTOP
+        AUTORADIOBUTTON "330h", 816, 70, 23, 39, 10, WS_TABSTOP
+        LTEXT           "BasePort for SoundBlaster", -1, 8, 53, 118, 8
+        AUTOCHECKBOX    "Use SB 16 features", UseBlasterExtension, 4, 73, 
+                        124, 10
+        AUTOCHECKBOX    "Reset Blaster on startup", ResetBlaster, 4, 63, 124, 
+                        10
+        DEFPUSHBUTTON   "#2", ID_resource, 9, 2, 118, 14, BS_ICON | 
+                        BS_AUTOSIZE
+        AUTOCHECKBOX    "Lock left & right slider", LockLeftRightSlider, 4, 
+                        93, 122, 10
+        AUTOCHECKBOX    "Override MMPM/2", ForceSettings, 4, 113, 122, 10
+        AUTOCHECKBOX    "Start minimized", hStartMinimized, 4, 123, 122, 10
+        AUTOCHECKBOX    "Fast refresh ( 3/10 s )", FastOverride, 4, 103, 117,
+                        10
+    END
+END
